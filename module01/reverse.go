@@ -7,5 +7,19 @@ package module01
 //   Reverse("alphabet") => "tebahpla"
 //
 func Reverse(word string) string {
-	return ""
+	// iterative solution
+	reversed := "";
+	for _, c := range word {
+		reversed = string(c) + reversed;
+	}
+	return reversed;
+	
+	// recursive solution, doesn't work for non-ascii characters
+	// if(len(word) == 0) {
+	// 	return "";
+	// }
+	// return string(word[len(word) - 1]) + Reverse(word[:len(word) - 1]);
 }
+
+
+// for in range is diferent from for using index. 
