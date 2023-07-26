@@ -22,5 +22,17 @@ package module01
 //   Factor([], 4) // []int{4}
 //
 func Factor(primes []int, number int) []int {
-	return nil
+	var factors []int;
+	for _, v := range primes {
+		for number % v == 0 {
+			factors = append(factors, v);
+			number /= v;
+		}
+	}
+	if number > 1 {
+		factors = append(factors, number);
+	}
+	return factors;
 }
+
+//for in go can function like while in other languages

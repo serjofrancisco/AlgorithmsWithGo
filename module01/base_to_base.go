@@ -8,6 +8,8 @@ package module01
 //
 //   BaseToBase("E", 16, 2) => "1110"
 //
+
+//Reusando o que já tem kkkk
 func BaseToBase(value string, base, newBase int) string {
-	return ""
+	return DecToBase(BaseToDec(value, base), newBase)
 }
